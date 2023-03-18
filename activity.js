@@ -13,6 +13,17 @@ const bookList = [
   { title: "Moby Dick", author: "Herman Melville" },
 ];
 
+const bookListAdd = (bl, booktoadd) => bl.concat(booktoadd);
+const bookListRemove = (bl, bookTitleToRemove) => {
+  bl.forEach(obj =>{
+    const values = Object.values(obj);
+    if(bookTitleToRemove === values[0]){
+      bl.splice(obj);
+    }
+  });
+}
+const listBooks = (bl) =>
+  bl.forEach((str) => console.log(str));
 /* Intermediate Challenge */
 
 /* (4) Write a one-line arrow function that takes in a number and returns a string stating whether the
